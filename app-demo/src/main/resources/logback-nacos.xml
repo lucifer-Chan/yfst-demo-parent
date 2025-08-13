@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration debug="true">
+    <include resource="META-INF/yfst-base-log.xml"/>
+
+    <contextName>APP_DEMO</contextName>
+
+    <logger name="com.yfst.demo.controller" additivity="false" level="${log.level}">
+        <appender-ref ref="async_web" />
+    </logger>
+    <logger name="com.yfst.demo.service" additivity="false" level="${log.level}">
+        <appender-ref ref="async_service"/>
+    </logger>
+    <logger name="com.yfst.demo.domain" additivity="false" level="${log.level}">
+        <appender-ref ref="async_domain"/>
+    </logger>
+
+    <root level="${log.level}">
+        <appender-ref ref="stdout"/>
+        <appender-ref ref="error"/>
+    </root>
+
+</configuration>
