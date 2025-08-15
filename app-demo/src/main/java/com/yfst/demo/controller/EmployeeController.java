@@ -2,7 +2,10 @@ package com.yfst.demo.controller;
 
 import com.yfst.base.framework.auth.ApiAuth;
 import com.yfst.base.framework.auth.PermitModel;
+import com.yfst.base.framework.context.util.CurrentAuthUserFetcher;
 import com.yfst.base.framework.exception.AppException;
+import com.yfst.base.framework.pojo.AuthUserInfo;
+import com.yfst.base.framework.pojo.user.PcUserbaseInfo;
 import com.yfst.base.framework.util.query.mybatis.MBPagedResult;
 import com.yfst.demo.domain.entity.CompanyEmployee;
 import com.yfst.demo.domain.example.CompanyEmployeeExample;
@@ -17,6 +20,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
+
+import static com.yfst.base.framework.context.util.CurrentAuthUserFetcher.fetch;
 
 /**
  * @Description : TODO
@@ -71,7 +76,15 @@ public class EmployeeController {
      * @return
      */
     @GetMapping("phone")
+    @ApiAuth(name = "获取用户的电话号码", description = "测试用")
     public String phone(Long id) {
         return demoService.phone(employeeMapper.selectByPrimaryKey(id));
+    }
+
+    @GetMapping("current/userInfo")
+    public AuthUserInfo<PcUserbaseInfo> name() {
+
+        AuthUserInfo<PcUserbaseInfo> userInfo = CurrentAuthUserFetcher.fetch();
+        return userInfo;
     }
 }

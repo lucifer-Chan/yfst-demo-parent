@@ -22,3 +22,8 @@ Content-Type: application/json
 ###
 # 获取电话号码 - 测试流程日志 D:\yfst_logs\app-dem\trace.log
 GET http://localhost:9010/demo/employee/phone?id=105
+
+### 获取当前用户信息
+GET http://localhost:9010/demo/employee/current/userInfo
+Content-Type: application/json
+userInfo: eyJ1c2VyVHlwZSI6MSwiYmFzZUluZm8iOnsidXNlcklkIjoxLCJ1c2VyTmFtZSI6IueuoeeQhuWRmCIsInJvbGVDb2RlIjoidGVzdC1yb2xlIiwicm9sZU5hbWUiOiLmtYvor5Xop5LoibIifX0=
