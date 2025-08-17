@@ -34,6 +34,9 @@ Content-Type: application/json
 userToken: 1111
 
 {
-"pageNum" : 1,
-"pageSize" : 15
+  "pageNum" : 1,
+  "pageSize" : 15,
+  "roleName" : "系统",
+  "status" : 1
+
 }
