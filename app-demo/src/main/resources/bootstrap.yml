@@ -7,8 +7,16 @@ spring:
     nacos:
       discovery:
         server-addr: 127.0.0.1:8848
+#        server-addr: nacos.micxapp.com:8848
+#        username: nacos
+#        password: ih57xQwtt1J3EyQO
       config:
-        server-addr: 127.0.0.1:8848
+        server-addr: nacos.micxapp.com:8848
+        username: nacos
+        password: ih57xQwtt1J3EyQO
         file-extension: yaml
         name: ${spring.application.name}-${spring.profiles.active}.${spring.cloud.nacos.config.file-extension}
-
+        # 共享配置
+        shared-configs:
+          - data-id: application-base-share.yaml
+            group: DEFAULT_GROUP

@@ -27,3 +27,13 @@ GET http://localhost:9010/demo/employee/phone?id=105
 GET http://localhost:9010/demo/employee/current/userInfo
 Content-Type: application/json
 userInfo: eyJ1c2VyVHlwZSI6MSwiYmFzZUluZm8iOnsidXNlcklkIjoxLCJ1c2VyTmFtZSI6IueuoeeQhuWRmCIsInJvbGVDb2RlIjoidGVzdC1yb2xlIiwicm9sZU5hbWUiOiLmtYvor5Xop5LoibIifX0=
+
+### BIMP测试feign调用
+POST http://localhost:9010/demo/bimp/role
+Content-Type: application/json
+userToken: 1111
+
+{
+"pageNum" : 1,
+"pageSize" : 15
+}
