@@ -27,7 +27,7 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <spring-cloud.version>Hoxton.SR12</spring-cloud.version>
         <spring-cloud-alibaba.version>2.2.9.RELEASE</spring-cloud-alibaba.version>
-        <yfst-cloud-framework.version>1.0.3</yfst-cloud-framework.version>
+        <yfst-cloud-framework.version>1.0.5-SNAPSHOT</yfst-cloud-framework.version>
     </properties>
 
     <dependencyManagement>
