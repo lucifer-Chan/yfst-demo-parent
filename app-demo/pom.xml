@@ -33,10 +33,18 @@
             <version>1.0</version>
         </dependency>
 
+        <!--
         <dependency>
             <groupId>com.hqd</groupId>
             <artifactId>feign-api-bimp</artifactId>
             <version>1.0.0</version>
+        </dependency>
+        -->
+
+        <dependency>
+            <groupId>com.yfst.base</groupId>
+            <artifactId>feign-api-bimp</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
         </dependency>
 
     </dependencies>
